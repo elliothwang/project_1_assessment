@@ -16,7 +16,11 @@ function init () {
 
 
 function addNum () {
-numberEl.innerHTML = parseInt(numberEl.innerHTML, 10) + parseInt(inputEl.value, 10);
+  if (parseInt(numberEl.innerHTML, 10) + parseInt(inputEl.value, 10) > 0) {
+    numberEl.style.color = "black";
+    numberEl.innerHTML = parseInt(numberEl.innerHTML, 10) + parseInt(inputEl.value, 10);
+  }
+  else numberEl.innerHTML = parseInt(numberEl.innerHTML, 10) + parseInt(inputEl.value, 10);
 }
 
 function subtractNum () {
